@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fujitaharuki <fujitaharuki@student.42.f    +#+  +:+       +#+        */
+/*   By: hfujita <hfujita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 08:06:08 by fujitaharuk       #+#    #+#             */
-/*   Updated: 2024/04/10 23:46:34 by fujitaharuk      ###   ########.fr       */
+/*   Updated: 2024/04/17 20:22:31 by hfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	judge_delim(char c, char const *set)
+static int	judge_delim(char c, char const *set)
 {
 	while (*set)
 	{

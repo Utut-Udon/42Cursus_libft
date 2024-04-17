@@ -6,7 +6,7 @@
 /*   By: hfujita <hfujita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 17:47:55 by fujitaharuk       #+#    #+#             */
-/*   Updated: 2024/04/15 23:04:48 by hfujita          ###   ########.fr       */
+/*   Updated: 2024/04/17 22:34:12 by hfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <limits.h>
 
 typedef struct s_list
 {

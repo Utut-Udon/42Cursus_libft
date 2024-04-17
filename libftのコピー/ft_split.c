@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fujitaharuki <fujitaharuki@student.42.f    +#+  +:+       +#+        */
+/*   By: hfujita <hfujita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 08:43:13 by fujitaharuk       #+#    #+#             */
-/*   Updated: 2024/04/10 23:37:27 by fujitaharuk      ###   ########.fr       */
+/*   Updated: 2024/04/17 21:15:16 by hfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	word_count(char const *s, char c)
+static	size_t	word_count(char const *s, char c)
 {
 	int		flag;
 	size_t	count;
@@ -34,7 +34,7 @@ size_t	word_count(char const *s, char c)
 	return (count);
 }
 
-char const	*move_ptr(char const *s, char c, size_t count)
+static char	*move_ptr(char const *s, char c, size_t count)
 {
 	int		flag;
 	size_t	tmp_count;
@@ -54,10 +54,10 @@ char const	*move_ptr(char const *s, char c, size_t count)
 		s++;
 	}
 	s--;
-	return (s);
+	return ((char *)s);
 }
 
-char	*get_word(char const *s, char c, size_t count)
+static char	*get_word(char const *s, char c, size_t count)
 {
 	size_t	w_len;
 	char	*dst;
@@ -73,7 +73,7 @@ char	*get_word(char const *s, char c, size_t count)
 	return (dst);
 }
 
-void	destroy_words(char **dst, size_t count)
+static void	destroy_words(char **dst, size_t count)
 {
 	while (count-- > 0)
 		free (dst[count]);

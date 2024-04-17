@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fujitaharuki <fujitaharuki@student.42.f    +#+  +:+       +#+        */
+/*   By: hfujita <hfujita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 12:54:18 by fujitaharuk       #+#    #+#             */
-/*   Updated: 2024/04/17 06:09:15 by fujitaharuk      ###   ########.fr       */
+/*   Updated: 2024/04/17 20:21:09 by hfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
-	
+
 	if (!lst)
-		return;
+		return ;
 	if (!(*lst))
 		*lst = new;
 	else

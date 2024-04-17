@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fujitaharuki <fujitaharuki@student.42.f    +#+  +:+       +#+        */
+/*   By: hfujita <hfujita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 16:50:35 by fujitaharuk       #+#    #+#             */
-/*   Updated: 2024/04/10 23:48:43 by fujitaharuk      ###   ########.fr       */
+/*   Updated: 2024/04/17 21:16:34 by hfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	get_numlen(int n)
+static size_t	get_numlen(int n)
 {
 	size_t	len;
 
@@ -34,7 +34,7 @@ size_t	get_numlen(int n)
 	return (len);
 }
 
-char	*getstr(size_t len)
+static char	*getstr(size_t len)
 {
 	char	*dst;
 	size_t	idx;
@@ -52,7 +52,7 @@ char	*getstr(size_t len)
 	return (dst);
 }
 
-char	*main_loop(char *dst, int n)
+static char	*main_loop(char *dst, int n)
 {
 	size_t	len;
 
