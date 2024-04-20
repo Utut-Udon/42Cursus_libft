@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hfujita <hfujita@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fujitaharuki <fujitaharuki@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 08:43:13 by fujitaharuk       #+#    #+#             */
-/*   Updated: 2024/04/17 21:15:16 by hfujita          ###   ########.fr       */
+/*   Updated: 2024/04/21 04:25:25 by fujitaharuk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,8 @@ char	**ft_split(char const *s, char c)
 	size_t	count;
 	char	**dst;
 
+	if (!s)
+		return (NULL);
 	wc = word_count(s, c);
 	dst = (char **)malloc(sizeof(char *) * (wc + 1));
 	if (!dst)
